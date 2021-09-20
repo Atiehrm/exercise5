@@ -73,9 +73,8 @@ public class Date {
             date.setMonth(date1.getMonth() + 1);
             date.setDay(1);
         }
-        if (date.getDay() == 30) {
-            if (date.getMonth() == 7 || date.getMonth() == 8 || date.getMonth() == 9 || date.getMonth() == 10
-                    || date.getMonth() == 11) {
+        else if (date.getDay() == 30) {
+                if (date.getMonth() >= 7 || date.getMonth() <= 11) {
                 date.setYear(date1.getYear());
                 date.setMonth(date1.getMonth() + 1);
                 date.setDay(1);
