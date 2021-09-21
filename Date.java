@@ -4,16 +4,18 @@ import java.util.GregorianCalendar;
 public class Date {
     private final int minYear = 1;
     private final int maxYear = 9999;
-    private int day;
-    private int year;
-    private int month;
+    private int day = 11;
+    private int year = 1400;
+    private int month = 1;
     private final String[] months = {"farvardin", "ordibehesht", "khordad", "tir", "mordad", "shahrivar"
             , "mehr", "aban", "azar", "dey", "bahman", "esfand"};
 
     public Date(int year, int month, int day) {
-        this.year = year;
-        this.month = month;
-        this.day = day;
+        if (isValidDate(year, month, day)) {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
     }
 
     public Date() {
@@ -65,6 +67,4 @@ public class Date {
         } else
             return 30;
     }
-
 }
-
